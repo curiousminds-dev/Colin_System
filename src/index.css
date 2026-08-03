@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+@layer base {
+  :root {
+    /* Brand palette */
+    --navy: #132465;
+    --navy-dark: #0F1E56;
+    --cyan: #43BDEB;
+    --cyan-light: #E8F8FE;
+    --page-bg: #F4F8FC;
+    --card-bg: #FFFFFF;
+    --text-primary: #1A2440;
+    --text-secondary: #667085;
+    --border-color: #E6ECF2;
+    --success: #22A06B;
+    --warning: #E9A23B;
+    --danger: #D64545;
+    --info: #2F80ED;
+
+    /* shadcn tokens */
+    --background: 210 47% 97%;
+    --foreground: 226 42% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 226 42% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 42% 17%;
+    --primary: 226 64% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 33% 95%;
+    --secondary-foreground: 226 42% 17%;
+    --muted: 210 33% 95%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 198 82% 59%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 67% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 29% 93%;
+    --input: 210 29% 93%;
+    --ring: 198 82% 59%;
+    --chart-1: 226 64% 24%;
+    --chart-2: 198 82% 59%;
+    --chart-3: 152 65% 38%;
+    --chart-4: 38 82% 57%;
+    --chart-5: 0 67% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #CBD5E1;
+    border-radius: 3px;
+  }
+  .nav-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .nav-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+  }
+  .nav-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
